@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why Did I Get $90 from Social Security? Eligibility Checker | Clearbenefit</title><meta name="description" content="The $90 deposit is a one-time Medicare Part B payment. Check if you qualify, when it arrives, and what it covers."><link rel="canonical" href="https://www.clearbenefit.example/">
+<meta property="og:title" content="Why Did I Get $90 from Social Security? Eligibility Checker | Clearbenefit"><meta property="og:description" content="The $90 deposit is a one-time Medicare Part B payment. Check if you qualify, when it arrives, and what it covers."><meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 10 10%27><circle cx=%275%27 cy=%275%27 r=%275%27 fill=%27%23F4C542%27/></svg>">
+<!-- ADSENSE: paste your AdSense script here once approved --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Clearbenefit","url":"https://www.clearbenefit.example"}</script></head><body>
+<header><div class="w"><a class="logo" href="/"><i>$</i>Clearbenefit</a><nav aria-label="Main"><a href="/#checker">Check eligibility</a><a href="/articles">Guides</a><a href="/faq">FAQ</a><a href="/contact">Contact</a></nav></div></header>
+<main><div class="w"><div class="hero"><div>
+<h1>Why did I get <mark>$90</mark> from Social Security?</h1>
+<p class="lead">You probably didn't. The deposit is a one-time <strong>Medicare</strong> payment for Part B enrollees, paid from the Medicare Improvement Fund. About 20 million people are eligible. Many are not.</p>
+<p>Answer four questions to see where you stand, then find out when your money should arrive.</p>
+<p class="meta">Based on CMS guidance reported by Fox Business and the Associated Press, October 2026.</p></div>
+<div class="tool" id="checker"><h2>Do you qualify for the $90 payment?</h2><p class="ui" style="margin:0;color:var(--mut)">Four questions. Nothing is stored or sent.</p>
+<form id="f">
+<fieldset><legend>1. What kind of Medicare do you have?</legend>
+<label class="opt"><input type="radio" name="q1" value="orig">Original Medicare (Part B)</label>
+<label class="opt"><input type="radio" name="q1" value="adv">Medicare Advantage (Part C)</label>
+<label class="opt"><input type="radio" name="q1" value="unk">I'm not sure</label></fieldset>
+<fieldset><legend>2. Does Medicaid or a state program pay your Part B premium?</legend>
+<label class="opt"><input type="radio" name="q2" value="no">No, I pay it myself</label>
+<label class="opt"><input type="radio" name="q2" value="yes">Yes</label>
+<label class="opt"><input type="radio" name="q2" value="unk">I'm not sure</label></fieldset>
+<fieldset><legend>3. Do you pay an income-related surcharge (IRMAA)?</legend>
+<label class="opt"><input type="radio" name="q3" value="no">No, standard premium</label>
+<label class="opt"><input type="radio" name="q3" value="yes">Yes</label>
+<label class="opt"><input type="radio" name="q3" value="unk">I'm not sure</label></fieldset>
+<fieldset><legend>4. Do you live in the United States?</legend>
+<label class="opt"><input type="radio" name="q4" value="yes">Yes</label>
+<label class="opt"><input type="radio" name="q4" value="no">No</label></fieldset>
+<button type="submit">See my result</button></form>
+<div class="res" id="r" role="status" aria-live="polite"></div></div></div>
+<section class="band" id="tracker"><h2>When will my $90 arrive?</h2>
+<div class="tabs" role="group" aria-label="Payment method"><button data-k="dd" aria-pressed="true">I have direct deposit</button><button data-k="pc" aria-pressed="false">I get paper checks</button></div><div id="tt"></div></section>
+<section class="band"><h2>What does $90 cover?</h2><p>The standard Part B premium is $202.90 a month in 2026, up from $185. Edit the number to match yours.</p>
+<label class="ui" for="pr"><strong>Your monthly Part B premium ($)</strong></label><br><input id="pr" type="number" step="0.10" min="0" value="202.90"><table style="margin-top:14px"><tbody id="o"></tbody></table></section>
+<section class="band"><h2>Guides</h2><div class="cols">
+<a class="c" href="/why-did-i-get-90-from-social-security"><h3>Why did I get $90 from Social Security?</h3><p>Where the money came from and why the label is confusing.</p></a>
+<a class="c" href="/why-didnt-i-get-90-medicare-payment"><h3>Why didn't I get the $90?</h3><p>The four groups left out, and what you can still do.</p></a>
+<a class="c" href="/medicare-90-payment-scams"><h3>Spotting $90 Medicare payment scams</h3><p>What real payments look like and what fraudsters say.</p></a></div></section></div><script>
+const $=s=>document.querySelector(s),v=n=>(document.querySelector('input[name='+n+']:checked')||{}).value;
+$('#f').onsubmit=e=>{e.preventDefault();const a=[v('q1'),v('q2'),v('q3'),v('q4')],r=$('#r');
+if(a.includes(undefined)){r.className='res mid';r.style.display='block';r.innerHTML='<h3>Answer all four questions</h3><p>Pick one option for each question above.</p>';return}
+let no=[];if(a[0]=='adv')no.push('Medicare Advantage enrollees are not included in this payment.');
+if(a[1]=='yes')no.push('People whose Part B premium is paid by Medicaid are excluded.');
+if(a[2]=='yes')no.push('Higher-income enrollees who pay IRMAA are excluded.');
+if(a[3]=='no')no.push('The payment is for beneficiaries living in the U.S.');
+let c='res',h,t;
+if(no.length){c+=' bad';h='You likely do not qualify';t='<ul>'+no.map(x=>'<li>'+x+'</li>').join('')+'</ul><p>This is based on the published CMS rules. Call 1-800-MEDICARE to confirm.</p>'}
+else if(a.includes('unk')){c+=' mid';h='You might qualify, but confirm first';t='<p>No exclusion applies from your answers, but you are unsure about one. Check your Medicare card or Medicare.gov account, or call 1-800-MEDICARE (1-800-633-4227).</p>'}
+else{h='You likely qualify';t='<p>Original Medicare, premium paid by you, standard amount, U.S. resident. Expect a one-time $90 by direct deposit around Oct. 8, or a paper check later in October. <a href="#tracker">When will mine arrive?</a></p>'}
+r.className=c;r.style.display='block';r.innerHTML='<h3>'+h+'</h3>'+t;r.scrollIntoView({behavior:'smooth',block:'nearest'})};
+const T={dd:['Direct deposit','Most direct deposits were scheduled on or around Oct. 8. Check your bank account and look for a deposit labeled "Medicare Improvement Fund Payment; $90 Payment to Offset October Premium."','If nothing is there, wait a few business days, then call the SSA at 1-800-772-1213 from Oct. 15 to check status.'],
+pc:['Paper check','Without direct deposit on file, a check comes from the U.S. Treasury later in October. Mail times vary, so allow extra days.','Status checks with the SSA at 1-800-772-1213 open Oct. 15. Never give your Medicare number or bank details to anyone who calls you first.']};
+function tab(k){document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k==k));$('#tt').innerHTML='<h3>'+T[k][0]+'</h3><p>'+T[k][1]+'</p><p>'+T[k][2]+'</p>'}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>tab(b.dataset.k));tab('dd');
+function calc(){const p=parseFloat($('#pr').value)||0,m=p*12;$('#o').innerHTML='<tr><td>One month of Part B</td><td>$'+p.toFixed(2)+'</td></tr><tr><td>Rebate share of one month</td><td>'+(p?(90/p*100).toFixed(0):0)+'%</td></tr><tr><td>Annual premium</td><td>$'+m.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})+'</td></tr><tr><td>Annual cost after the $90</td><td><strong>$'+(m-90).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})+'</strong></td></tr>'}
+$('#pr').oninput=calc;calc();</script></main>
+<footer><div class="w"><p><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms of Use</a><a href="/disclaimer">Disclaimer</a></p>
+<p>Clearbenefit is an independent information site. It is not affiliated with, endorsed by, or operated by Medicare, CMS, the Social Security Administration, or any government agency. Official help: 1-800-MEDICARE (1-800-633-4227). &copy; 2026 Clearbenefit.</p></div></footer></body></html>
